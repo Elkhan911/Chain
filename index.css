@@ -1,0 +1,34 @@
+.header {
+  margin: auto;
+  width: 1200px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.task {
+  border: 1px solid black;
+  width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.task__box {
+  padding: 20px;
+  width: 80%;
+  display: flex;
+  margin: auto;
+}
+
+.task__description {
+  font-size: 20px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.task__input {
+  margin: auto;
+  width: 200px;
+  height: 30px;
+}

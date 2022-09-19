@@ -32,3 +32,14 @@ if (firstTime !== null) {
 console.log(firstTime);
 console.log(currentTime);
 console.log(diffMinutes);
+
+// 3. Дан инпут. По потери фокуса в этом инпуте сохраните его значение в локальное хранилище.
+// При следующем заходе пользователя на страницу установите в инпуте сохраненный ранее текст.
+
+let input3 = document.querySelector("#_input3");
+
+input3.addEventListener("blur", function () {
+  localStorage.setItem("inp3Value", input3.value);
+});
+
+input3.value = localStorage.getItem("inp3Value");
