@@ -17,10 +17,12 @@
   width: 80%;
   display: flex;
   margin: auto;
+  text-align: center;
+  justify-content: center;
 }
 
 .task__description {
-  font-size: 20px;
+  font-size: 22px;
   border: 1px solid black;
   text-align: center;
   padding: 20px;
@@ -31,4 +33,18 @@
   margin: auto;
   width: 200px;
   height: 30px;
+}
+
+.task__text {
+  font-size: 20px;
+}
+
+.task__button {
+  width: 170px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.task__button:hover {
+  background-color: floralwhite;
 }

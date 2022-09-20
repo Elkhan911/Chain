@@ -11,7 +11,7 @@ let res =
   Number(localStorage.getItem("key1")) +
   Number(localStorage.getItem("key2")) +
   Number(localStorage.getItem("key3"));
-// console.log(res);
+console.log(res);
 
 // 2. По заходу пользователя на сайт запишите в локальное хранилище текущий момент времени.
 // Затем по повторному заходу выведите, сколько прошло времени с предыдущего захода пользователя на сайт.
@@ -43,3 +43,36 @@ input3.addEventListener("blur", function () {
 });
 
 input3.value = localStorage.getItem("inp3Value");
+
+// 4. Пользователь заходит на сайт, затем обновляет страницу, затем еще раз обновляет и так далее. - ??
+// Сделайте счетчик обновления страницы.
+// Каждый раз при обновлении выводите значение счетчика на экран.
+
+let span4 = document.querySelector("#_span4");
+let counterValue4 = localStorage.getItem("counter4");
+let counterPlus = 0;
+
+if (counterValue4 == null) {
+  localStorage.setItem("counter4", 0);
+  span4.textContent = 0;
+} else {
+  let a = counterPlus++;
+  localStorage.setItem("counter4", a);
+  span4.textContent = localStorage.getItem("counter4");
+  console.log(localStorage.getItem("counter4"));
+}
+
+// **********************************   Хранение массивов и объектов в локальном хранилище     ***************************
+
+// 5. Даны инпуты и кнопка. По нажатию на кнопку получите тексты всех инпутов
+// в виде массива и сохраните этот массив в локальное хранилище.
+
+let inputs5All = document.querySelectorAll(".task__input5");
+let arr5 = [];
+
+for (let input of inputs5All) {
+  arr5.push(input.value);
+}
+
+localStorage.setItem("array5", JSON.stringify(arr5));
+console.log(localStorage.getItem("array5"));
