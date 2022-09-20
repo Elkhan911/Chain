@@ -65,11 +65,17 @@ if (counterValue4 == null) {
 // в виде массива и сохраните этот массив в локальное хранилище.
 
 let inputs5All = document.querySelectorAll(".task__input5");
+let button5 = document.querySelector("#_button5");
 let arr5 = [];
 
-for (let input of inputs5All) {
-  arr5.push(input.value);
+button5.addEventListener("click", saveArray);
+
+function saveArray() {
+  for (let input of inputs5All) {
+    arr5.push(input.value);
+  }
+  localStorage.setItem("array5", JSON.stringify(arr5));
+  button5.removeEventListener("click", saveArray);
 }
 
-localStorage.setItem("array5", JSON.stringify(arr5));
 console.log(localStorage.getItem("array5"));
