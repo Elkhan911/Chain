@@ -50,16 +50,13 @@ input3.value = localStorage.getItem("inp3Value");
 
 let span4 = document.querySelector("#_span4");
 let counterValue4 = localStorage.getItem("counter4");
-let counterPlus = 0;
 
 if (counterValue4 == null) {
   localStorage.setItem("counter4", 0);
   span4.textContent = 0;
 } else {
-  let a = counterPlus++;
-  localStorage.setItem("counter4", a);
+  localStorage.setItem("counter4", ++counterValue4);
   span4.textContent = localStorage.getItem("counter4");
-  console.log(localStorage.getItem("counter4"));
 }
 
 // **********************************   Хранение массивов и объектов в локальном хранилище     ***************************
